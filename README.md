@@ -1,4 +1,4 @@
-# UnveelWW
+# Unveel Weather Widget
 
 A react weather component library
 
@@ -6,7 +6,7 @@ A react weather component library
 
 ### Installation
 
-### `npm install @bezalel001/unveel-ww@0.0.1`
+### `npm install @bezalel001/unveel-ww@0.0.2`
 
 ### ✨ Features
 
