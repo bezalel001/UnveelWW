@@ -5,7 +5,7 @@ import store from '../../store';
 
 import CurrentWeather from './CurrentWeather';
 
-interface UWeatherWidgetProps {
+export interface UWeatherWidgetProps {
   openWeatherAPIKey: string;
   theme?: string;
   periodicallyRefreshDataInSeconds?: number;

@@ -4,13 +4,9 @@ A react weather component library
 
 # ☁️ unveel-ww ☁️
 
----
+### Installation
 
----
-
-### Install
-
-## `npm install @bezalel001/unveel-ww@0.0.1`
+### `npm install @bezalel001/unveel-ww@0.0.1`
 
 ### ✨ Features
 
@@ -26,7 +22,8 @@ A react weather component library
   import React from 'react';
   import { UWeatherWidget } from '@bezalel001/unveel-ww';
 
-  const BasicComponent = () =>{
+  const BasicComponent = () => {
+
     const apiKey= 'xxx'; // your openweathermap api key
 
     return (
@@ -39,8 +36,10 @@ A react weather component library
 
   ```JSX
   import React from 'react';
-   import { UWeatherWidget } from '@bezalel001/unveel-ww';
+  import { UWeatherWidget } from '@bezalel001/unveel-ww';
+
   const ReloadData = () => {
+
     const key = 'xxx'; // your openweathermap api key
 
     return (
@@ -57,7 +56,9 @@ A react weather component library
   ```JSX
   import React from 'react';
   import { UWeatherWidget } from '@bezalel001/unveel-ww';
+
   const LightTheme =() => {
+
     const key = 'some key'; // your openweathermap api key
 
     return (
@@ -81,7 +82,6 @@ A react weather component library
         <UWeatherWidget
           openWeatherAPIKey={key}
           theme="dark"
-          periodicallyRefreshDataInSeconds={90}
         />
       );
   }
@@ -93,17 +93,19 @@ A react weather component library
   ```JSX
     import React from 'react';
     import { UWeatherWidget } from '@bezalel001/unveel-ww';
+
     const WeatherWidget =() => {
+
       const key = 'some key'; // your openweathermap api key
 
       return (
         <UWeatherWidget
           openWeatherAPIKey={key}
+          periodicallyRefreshDataInSeconds={90}
           theme="dark"
         />
       );
   }
-
   ```
 
 ---
@@ -113,17 +115,18 @@ A react weather component library
 | Name | Type | Default | Description |
 | ---- | ---- | ------- | ----------- |
 
-| `openWeatherAPIKey` | `string` | Your API key from [OpenWeatherMap](https://openweathermap.org/) |
+| `openWeatherAPIKey` | _string_ | Your API key from [OpenWeatherMap](https://openweathermap.org/) |
 
-| `theme` | `string`| `dark` |Takes one of two possible values(`'light'` or `'dark'`) |
-| `periodicallyRefreshDataInSeconds` | `number` | `30` | Number of seconds that determines when data should be refreshed in the background
+| `theme` | _string_| `'dark'` |Takes one of two possible values(`'light'` or `'dark'`) |
+| `periodicallyRefreshDataInSeconds` | _number_ | `30` | Number of seconds that determines when data should be refreshed in the background
 
 ---
 
 #### 🔨 Development
 
 ```
-npm run install
+git clone https://github.com/bezalel001/unveel-ww.git
+npm install
 npm run storybook
 ```
 
