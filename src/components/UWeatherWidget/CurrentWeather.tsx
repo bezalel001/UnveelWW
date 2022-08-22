@@ -118,11 +118,7 @@ const CurrentWeather: React.FC<CurrentWeatherProps> = React.memo(
     return (
       <ThemeProvider theme={{ theme }}>
         <Container>
-          <Search
-            title="Enter city name and press search button"
-            apiKey={apiKey}
-            refreshTime={periodicallyRefreshDataInSeconds}
-          />
+          <Search title="Enter city name and press enter..." apiKey={apiKey} />
 
           {loading ? (
             <Loader color={theme}>Loading...</Loader>

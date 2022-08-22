@@ -35,10 +35,9 @@ const StyledForm = styled.form`
 interface SearchProps {
   title: string;
   apiKey: string;
-  refreshTime: number;
 }
 
-const Search: FC<SearchProps> = memo(({ title, apiKey, refreshTime }) => {
+const Search: FC<SearchProps> = memo(({ title, apiKey }) => {
   const dispatch = useDispatch();
   const [city, setCity] = useState('');
 
@@ -59,11 +58,7 @@ const Search: FC<SearchProps> = memo(({ title, apiKey, refreshTime }) => {
 
   return (
     <StyledForm onSubmit={submitHandler}>
-      <StyledInput
-        value={city}
-        onChange={changehandler}
-        placeholder="Enter a city and press enter..."
-      />
+      <StyledInput value={city} onChange={changehandler} placeholder={title} />
     </StyledForm>
   );
 });
