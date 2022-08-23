@@ -11,26 +11,18 @@ import Search from './Search';
 import store from '../../store';
 
 describe('Running Test for UnveelWeather Component', () => {
-  const apiKey = 'some key';
-  test('Check that widget is correctly rendered', () => {
-    render(
-      <UWeatherWidget
-        openWeatherAPIKey={apiKey}
-        theme="light"
-        periodicallyRefreshDataInSeconds={30}
-      />
-    );
-    expect(
-      screen.findByPlaceholderText('Enter a city and press enter...')
-    ).toBeTruthy();
-  });
+    const apiKey = 'some key';
+    test('Check that widget is correctly rendered', () => {
+        render(<UWeatherWidget openWeatherAPIKey={apiKey} theme="light" periodicallyRefreshDataInSeconds={30} />);
+        expect(screen.findByPlaceholderText('Enter a city and press enter...')).toBeTruthy();
+    });
 
-  test('renders the Search component', () => {
-    render(
-      <Provider store={store}>
-        <Search title="city" apiKey={apiKey} />
-      </Provider>
-    );
-    expect(screen.getByPlaceholderText('city')).toBeInTheDocument();
-  });
+    test('renders the Search component', () => {
+        render(
+            <Provider store={store}>
+                <Search title="city" apiKey={apiKey} />
+            </Provider>
+        );
+        expect(screen.getByPlaceholderText('city')).toBeInTheDocument();
+    });
 });

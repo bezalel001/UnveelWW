@@ -6,25 +6,17 @@ import store from '../../store';
 import CurrentWeather from './CurrentWeather';
 
 export interface UWeatherWidgetProps {
-  openWeatherAPIKey: string;
-  theme?: string;
-  periodicallyRefreshDataInSeconds?: number;
+    openWeatherAPIKey: string;
+    theme?: string;
+    periodicallyRefreshDataInSeconds?: number;
 }
 
-const UWeatherWidget: React.FC<UWeatherWidgetProps> = ({
-  openWeatherAPIKey,
-  theme = 'light',
-  periodicallyRefreshDataInSeconds = 30,
-}) => {
-  return (
-    <Provider store={store}>
-      <CurrentWeather
-        apiKey={openWeatherAPIKey}
-        theme={theme}
-        periodicallyRefreshDataInSeconds={periodicallyRefreshDataInSeconds}
-      />
-    </Provider>
-  );
+const UWeatherWidget: React.FC<UWeatherWidgetProps> = ({ openWeatherAPIKey, theme = 'light', periodicallyRefreshDataInSeconds = 30 }) => {
+    return (
+        <Provider store={store}>
+            <CurrentWeather apiKey={openWeatherAPIKey} theme={theme} periodicallyRefreshDataInSeconds={periodicallyRefreshDataInSeconds} />
+        </Provider>
+    );
 };
 
 export default UWeatherWidget;

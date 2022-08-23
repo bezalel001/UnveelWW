@@ -5,99 +5,95 @@ export const SET_ALERT = 'SET_ALERT';
 export const SET_CITY = 'SET_CITY';
 
 export interface Weather {
-  description: string;
-  icon: string;
-  id: number;
-  main: string;
+    description: string;
+    icon: string;
+    id: number;
+    main: string;
 }
 
 export interface WeatherData {
-  base: string;
-  clouds: {
-    all: number;
-  };
-  cod: number;
-  coord: {
-    lon: number;
-    lat: number;
-  };
-  dt: number;
-  id: number;
-  main: {
-    feels_like: number;
-    humidity: number;
-    pressure: number;
-    temp: number;
-    temp_min: number;
-    temp_max: number;
-  };
-  name: string;
-  sys: {
-    country: string;
+    base: string;
+    clouds: {
+        all: number;
+    };
+    cod: number;
+    coord: {
+        lon: number;
+        lat: number;
+    };
+    dt: number;
     id: number;
-    sunrise: number;
-    sunset: number;
-    type: number;
-  };
-  timezone: number;
-  visibility: number;
-  weather: Weather[];
-  wind: {
-    speed: number;
-    deg: number;
-  };
+    main: {
+        feels_like: number;
+        humidity: number;
+        pressure: number;
+        temp: number;
+        temp_min: number;
+        temp_max: number;
+    };
+    name: string;
+    sys: {
+        country: string;
+        id: number;
+        sunrise: number;
+        sunset: number;
+        type: number;
+    };
+    timezone: number;
+    visibility: number;
+    weather: Weather[];
+    wind: {
+        speed: number;
+        deg: number;
+    };
 }
 
 export interface WeatherError {
-  cod: string;
-  message: string;
+    cod: string;
+    message: string;
 }
 
 export interface WeatherState {
-  data: WeatherData | null;
-  loading: boolean;
-  error: string;
-  city: string;
+    data: WeatherData | null;
+    loading: boolean;
+    error: string;
+    city: string;
 }
 
 export interface Today {
-  dayOfWeek: string;
-  dateToday: number;
-  month: string;
-  year: number;
-  monthNumber: number;
-  date: Date;
-  refreshedAt: string;
+    dayOfWeek: string;
+    dateToday: number;
+    month: string;
+    year: number;
+    monthNumber: number;
+    date: Date;
+    refreshedAt: string;
 }
 
 interface GetWeatherAction {
-  type: typeof GET_WEATHER;
-  payload: WeatherData;
+    type: typeof GET_WEATHER;
+    payload: WeatherData;
 }
 
 interface SetLoadingAction {
-  type: typeof SET_LOADING;
+    type: typeof SET_LOADING;
 }
 
 interface SetErrorAction {
-  type: typeof SET_ERROR;
-  payload: string;
+    type: typeof SET_ERROR;
+    payload: string;
 }
 
 interface SetCityAction {
-  type: typeof SET_CITY;
-  payload: string;
+    type: typeof SET_CITY;
+    payload: string;
 }
-export type WeatherAction =
-  | GetWeatherAction
-  | SetLoadingAction
-  | SetErrorAction
-  | SetCityAction;
+export type WeatherAction = GetWeatherAction | SetLoadingAction | SetErrorAction | SetCityAction;
 
 export interface AlertAction {
-  type: typeof SET_ALERT;
-  payload: string;
+    type: typeof SET_ALERT;
+    payload: string;
 }
 export interface AlertState {
-  message: string;
+    message: string;
 }
