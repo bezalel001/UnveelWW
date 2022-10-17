@@ -6,7 +6,7 @@ A react weather component library ![unveel-ww-themes](https://user-images.github
 
 ### Installation
 
-### `npm install @bezalel001/unveel-ww@0.0.3`
+### `see development`
 
 ### ✨ Features
 
